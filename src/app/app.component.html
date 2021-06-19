@@ -1,15 +1,15 @@
 <div class="screen">
     <div class="column">
         <div class="states">
-            <app-visual-state class="state"></app-visual-state>
-            <app-verbal-state class="state"></app-verbal-state>
+            <app-visual-state image="{{ image }}" class="state"></app-visual-state>
+            <app-verbal-state text="{{ bubble }}" class="state"></app-verbal-state>
         </div>
         <div class="buttons">
-            <app-button text="put to sleep" (click)="onClick()"></app-button>
-            <app-button text="clean"></app-button>
-            <app-button text="point the laser pointer"></app-button>
-            <app-button text="hug"></app-button>
-            <app-button text="feed"></app-button>
+            <app-button buttonText="{{ stateMachineService.buttons[1] }}" (buttonClick)="onClick($event)"></app-button>
+            <app-button buttonText="{{ stateMachineService.buttons[2] }}" (buttonClick)="onClick($event)"></app-button>
+            <app-button buttonText="{{ stateMachineService.buttons[3] }}" (buttonClick)="onClick($event)"></app-button>
+            <app-button buttonText="{{ stateMachineService.buttons[4] }}" (buttonClick)="onClick($event)"></app-button>
+            <app-button buttonText="{{ stateMachineService.buttons[5] }}" (buttonClick)="onClick($event)"></app-button>
         </div>
     </div>
 </div>

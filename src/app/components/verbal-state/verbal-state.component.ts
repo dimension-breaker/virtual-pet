@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-verbal-state',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./verbal-state.component.css']
 })
 export class VerbalStateComponent implements OnInit {
+  @Input() text: string = "candy is afk"
 
   constructor() { }
 
