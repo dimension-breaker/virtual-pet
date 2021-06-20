@@ -6,5 +6,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./image.component.css']
 })
 export class ImageComponent {
-  @Input() image: string = "../../../assets/AFKCat.gif";
+  @Input() image: string = "";
 }

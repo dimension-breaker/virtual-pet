@@ -4,14 +4,14 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export abstract class StateService {
-  afkCat: string = "../../../assets/AFKCat.gif";
-  angryCat: string = "../../../assets/AngryCat.gif";
-  runningCat: string = "../../../assets/ChasingCat.gif";
-  deadCat: string = "../../../assets/DeadCat.gif";
-  eatingCat: string = "../../../assets/EatingCat.gif";
-  happyCat: string = "../../../assets/HappyCat.gif";
-  sleepyCat: string = "../../../assets/SleepyCat.gif";
-  wetCat: string = "../../../assets/WetCat.gif";
+  afkCat: string = "assets/AFKCat.gif";
+  angryCat: string = "assets/AngryCat.gif";
+  runningCat: string = "assets/ChasingCat.gif";
+  deadCat: string = "assets/DeadCat.gif";
+  eatingCat: string = "assets/EatingCat.gif";
+  happyCat: string = "assets/HappyCat.gif";
+  sleepyCat: string = "assets/SleepyCat.gif";
+  wetCat: string = "assets/WetCat.gif";
 
   abstract execute(image: string): string;
 

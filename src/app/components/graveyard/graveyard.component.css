@@ -1,0 +1,50 @@
+p {
+    position: absolute;
+    margin: 0;
+    margin-top: 2em;
+    color: white;
+    font-family: 'Mr Dafoe';
+    font-size: 5.5em;
+    text-shadow: 0 0 0.05em lightgoldenrodyellow, 0 0 0.2em lightgreen, 0 0 0.3em black;
+    animation: rise 4s cubic-bezier(0.54, -0.53, 1, -0.29) infinite;
+}
+
+@keyframes rise {
+    0% {
+        opacity: 0;
+        transform: rotate(-7deg);
+    }
+    10% {
+        opacity: 1;
+        transform: rotate(-7deg) translateY(-100%);
+    }
+    20% {
+        transform: rotate(-7deg) translateY(-200%);
+    }
+    30% {
+        transform: rotate(-7deg) translateY(-100%);
+    }
+    40% {
+        transform: rotate(-7deg) translateY(-200%);
+    }
+    50% {
+        transform: rotate(-7deg) translateY(-100%);
+    }
+    60% {
+        transform: rotate(-7deg) translateY(-200%);
+    }
+    70% {
+        transform: rotate(-7deg) translateY(-100%);
+    }
+    80% {
+        transform: rotate(-7deg) translateY(-200%);
+    }
+    90% {
+        opacity: 1;
+        transform: rotate(-7deg) translateY(-100%);
+    }
+    100% {
+        opacity: 0;
+        transform: rotate(-7deg) translateY(-200%);
+    }
+}

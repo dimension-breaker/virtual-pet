@@ -1,14 +1,3 @@
-<div class="virtual-pet">
-    <div class="virtual-pet-column">
-        <div>
-            <mat-progress-bar mode="determinate" value="{{ progress }}"></mat-progress-bar>
-        </div>
-        <div class="state-row">
-            <app-image image="{{ image }}"></app-image>
-            <app-bubble bubble="{{ bubble }}"></app-bubble>
-        </div>
-        <div class="button-row">
-            <app-button *ngFor="let buttonText of stateMachineService.buttonTexts.slice(1)" buttonText="{{ buttonText }}" (buttonClick)="onClick($event)"></app-button>
-        </div>
-    </div>
-</div>
+<app-virtual-pet></app-virtual-pet>
+
+<app-graveyard></app-graveyard>

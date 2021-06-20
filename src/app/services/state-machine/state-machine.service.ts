@@ -26,7 +26,7 @@ export class StateMachineService {
     new PointTheLaserPointerService(),
     new PutToSleepService()
   ]
-  protected image: string = "../../../assets/AFKCat.gif";
+  protected image: string = this.states[0].afkCat;
 
   execute(state: string): void {
     this.image = this.states[this.buttonTexts.indexOf(state)].execute(this.image);
