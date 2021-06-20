@@ -10,7 +10,7 @@ import { PutToSleepService } from '../state/put-to-sleep/put-to-sleep.service';
   providedIn: 'root'
 })
 export class StateMachineService {
-  buttons = [
+  buttonTexts = [
     "decay",
     "clean",
     "feed",
@@ -29,7 +29,7 @@ export class StateMachineService {
   protected image: string = "../../../assets/AFKCat.gif";
 
   execute(state: string): void {
-    this.image = this.states[this.buttons.indexOf(state)].execute(this.image);
+    this.image = this.states[this.buttonTexts.indexOf(state)].execute(this.image);
   }
 
   getImage(): string {
@@ -37,6 +37,6 @@ export class StateMachineService {
   }
 
   getBubble(): string{
-    return "candy is " + this.image.substring(this.image.lastIndexOf("/") + 1, this.image.lastIndexOf("C"));
+    return "candy is " + this.image.substring(this.image.lastIndexOf("/") + 1, this.image.lastIndexOf("C")).toLowerCase();
   }
 }

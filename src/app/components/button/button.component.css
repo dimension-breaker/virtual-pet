@@ -1,38 +1,27 @@
-.screen {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.button {
+div {
     height: 80px;
     width: 120px;
+    margin: 5px;
 }
 
 button {
-    display: inline-block;
-    font-size: 20px;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    outline: none;
-    color: lightblue;
-    background-color: white;
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 9px #999;
     height: 100%;
     width: 100%;
+    border: none;
+    border-radius: 15px;
+    background-color: white;
+    font-size: 20px;
+    color: lightgreen;
+    cursor: crosshair;
+    box-shadow: 0 9px #999;
 }
 
 button:hover {
-    background-color: lightpink;
+    background-color: lightgoldenrodyellow;
 }
 
 button:active {
-    background-color: white;
-    box-shadow: 0 5px #666;
+    background-color: lightgoldenrodyellow;
+    box-shadow: 0 5px rgb(102, 102, 102);
     transform: translateY(4px);
 }

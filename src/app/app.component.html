@@ -1,15 +1,14 @@
-<div class="screen">
-    <div class="column">
-        <div class="states">
-            <app-visual-state image="{{ image }}" class="state"></app-visual-state>
-            <app-verbal-state text="{{ bubble }}" class="state"></app-verbal-state>
+<div class="virtual-pet">
+    <div class="virtual-pet-column">
+        <div>
+            <mat-progress-bar mode="determinate" value="{{ progress }}"></mat-progress-bar>
         </div>
-        <div class="buttons">
-            <app-button buttonText="{{ stateMachineService.buttons[1] }}" (buttonClick)="onClick($event)"></app-button>
-            <app-button buttonText="{{ stateMachineService.buttons[2] }}" (buttonClick)="onClick($event)"></app-button>
-            <app-button buttonText="{{ stateMachineService.buttons[3] }}" (buttonClick)="onClick($event)"></app-button>
-            <app-button buttonText="{{ stateMachineService.buttons[4] }}" (buttonClick)="onClick($event)"></app-button>
-            <app-button buttonText="{{ stateMachineService.buttons[5] }}" (buttonClick)="onClick($event)"></app-button>
+        <div class="state-row">
+            <app-image image="{{ image }}"></app-image>
+            <app-bubble bubble="{{ bubble }}"></app-bubble>
+        </div>
+        <div class="button-row">
+            <app-button *ngFor="let buttonText of stateMachineService.buttonTexts.slice(1)" buttonText="{{ buttonText }}" (buttonClick)="onClick($event)"></app-button>
         </div>
     </div>
 </div>

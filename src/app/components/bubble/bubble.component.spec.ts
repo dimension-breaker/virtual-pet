@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { VerbalStateComponent } from './verbal-state.component';
+import { BubbleComponent } from './bubble.component';
 
-describe('VerbalStateComponent', () => {
-  let component: VerbalStateComponent;
-  let fixture: ComponentFixture<VerbalStateComponent>;
+describe('BubbleComponent', () => {
+  let component: BubbleComponent;
+  let fixture: ComponentFixture<BubbleComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ VerbalStateComponent ]
+      declarations: [ BubbleComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(VerbalStateComponent);
+    fixture = TestBed.createComponent(BubbleComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
