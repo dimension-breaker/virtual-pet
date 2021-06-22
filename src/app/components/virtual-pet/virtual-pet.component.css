@@ -11,10 +11,6 @@
     app-bubble {
         display: none;
     }
-    .button-row {
-        position: absolute;
-        left: -30px;
-    }
 }
 
 .virtual-pet {
@@ -26,7 +22,6 @@
     animation: flicker 1.75s linear infinite;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 @keyframes flicker {
@@ -48,7 +43,8 @@
 }
 
 .virtual-pet-column {
-    height: 60%;
+    height: 80%;
+    margin-top: 50px;
     border: 1px solid green;
     border-radius: 4px;
     padding: 10px;
@@ -59,7 +55,7 @@
 .state-row {
     display: flex;
     align-items: flex-end;
-    flex: 2;
+    flex: 4;
 }
 
 .button-row {

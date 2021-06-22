@@ -8,7 +8,7 @@ import { interval, Observable, Subscription } from 'rxjs';
 })
 export class GraveyardComponent {
   isMidnight: boolean = false;
-  graveyardLefts: string[] = ["10%", "80%", "10%", "80%"];
+  graveyardLefts: string[] = ["10%", "70%", "10%", "70%"];
   graveyardTops: string[] = ["10%", "10%", "50%", "50%"];
   zombies: string[] = [
     "OwO",

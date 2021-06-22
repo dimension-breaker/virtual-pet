@@ -8,7 +8,10 @@
             <app-bubble bubble="{{ bubble }}"></app-bubble>
         </div>
         <div class="button-row">
-            <app-button *ngFor="let buttonText of stateMachineService.buttonTexts.slice(1)" buttonText="{{ buttonText }}" (buttonClick)="onClick($event)"></app-button>
+            <app-button *ngFor="let buttonText of stateMachineService.buttonTexts.slice(1, 4)" buttonText="{{ buttonText }}" (buttonClick)="onClick($event)"></app-button>
+        </div>
+        <div class="button-row">
+            <app-button *ngFor="let buttonText of stateMachineService.buttonTexts.slice(4, 6)" buttonText="{{ buttonText }}" (buttonClick)="onClick($event)"></app-button>
         </div>
     </div>
 </div>
