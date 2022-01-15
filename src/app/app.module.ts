@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { MatProgressBarModule } from "@angular/material/progress-bar";
 
 import { AppComponent } from './app.component';
 import { ImageComponent } from './components/image/image.component';
@@ -19,8 +18,7 @@ import { VirtualPetComponent } from './components/virtual-pet/virtual-pet.compon
     VirtualPetComponent
   ],
   imports: [
-    BrowserModule,
-    MatProgressBarModule
+    BrowserModule
   ],
   providers: [],
   bootstrap: [AppComponent]
