@@ -17,6 +17,7 @@ export class VirtualPetComponent {
   minProgress: number = 0;
   maxProgress: number = 100;
   progress: number = 0;
+  stringProgress: string = '0%'
 
   observable: Observable<number> = interval(this.timeIncrement);
   subscription: Subscription = this.observable.subscribe((i) => this.tick());
@@ -27,6 +28,7 @@ export class VirtualPetComponent {
     }
 
     this.progress += this.maxProgress / (this.waitTime / this.timeIncrement);
+    this.stringProgress = this.progress + '%'
   }
 
   onClick(buttonText: string): void {
@@ -42,5 +44,6 @@ export class VirtualPetComponent {
     this.bubble = this.stateMachineService.getBubble();
 
     this.progress = this.minProgress;
+    this.stringProgress = this.progress + '%'
   }
 }
