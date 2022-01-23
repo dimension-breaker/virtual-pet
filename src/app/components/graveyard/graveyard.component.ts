@@ -27,7 +27,7 @@ export class GraveyardComponent {
     if (!this.isMidnight) {
       this.shuffle(this.graveyardTops);
       this.shuffle(this.graveyardLefts);
-      this.shuffle(this.zombies);  
+      this.shuffle(this.zombies);
     }
   }
 

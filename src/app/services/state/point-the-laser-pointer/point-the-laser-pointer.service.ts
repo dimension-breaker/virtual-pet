@@ -13,7 +13,7 @@ export class PointTheLaserPointerService extends StateService {
     if (image === this.eatingCat || image === this.sleepyCat) {
       return image;
     }
-    
+
     return this.runningCat;
   }
 }

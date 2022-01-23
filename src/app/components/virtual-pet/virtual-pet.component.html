@@ -1,6 +1,6 @@
 <div class="virtual-pet">
     <div class="virtual-pet-column">
-        <div class="progress"><div class="progress-bar" role="progressbar" [ngStyle]="{ 'width': stringProgress }"></div></div>
+        <div class="progress" style="height: 2px;"><div class="progress-bar bg-info" role="progressbar" [ngStyle]="{ 'width': progress + '%' }" aria-valuenow="{ progress }" aria-valuemin="0" aria-valuemax="100"></div></div>
         <div class="state-row">
             <app-image image="{{ image }}"></app-image>
             <app-bubble bubble="{{ bubble }}"></app-bubble>

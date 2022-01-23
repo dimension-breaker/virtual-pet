@@ -8,6 +8,7 @@
     .virtual-pet-column {
         width: 410px;
     }
+
     app-bubble {
         display: none;
     }
@@ -28,15 +29,19 @@
     0% {
         background-color: white;
     }
+
     25% {
         background-color: lightblue;
     }
+
     50% {
         background-color: lightyellow;
     }
+
     75% {
         background-color: lightpink;
     }
+
     100% {
         background-color: white;
     }

@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { BubbleComponent } from './bubble.component';
+
 
 describe('BubbleComponent', () => {
   let component: BubbleComponent;
@@ -8,9 +8,9 @@ describe('BubbleComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BubbleComponent ]
+      declarations: [BubbleComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

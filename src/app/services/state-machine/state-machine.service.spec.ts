@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
-
 import { StateMachineService } from './state-machine.service';
+
 
 describe('StateMachineService', () => {
   let service: StateMachineService;

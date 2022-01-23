@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { GraveyardComponent } from './graveyard.component';
+
 
 describe('GraveyardComponent', () => {
   let component: GraveyardComponent;
@@ -8,9 +8,9 @@ describe('GraveyardComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ GraveyardComponent ]
+      declarations: [GraveyardComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

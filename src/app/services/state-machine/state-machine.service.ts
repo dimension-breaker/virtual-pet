@@ -36,7 +36,7 @@ export class StateMachineService {
     return this.image;
   }
 
-  getBubble(): string{
+  getBubble(): string {
     return "candy is " + this.image.substring(this.image.lastIndexOf("/") + 1, this.image.lastIndexOf("C")).toLowerCase();
   }
 }

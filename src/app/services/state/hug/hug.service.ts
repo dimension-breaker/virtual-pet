@@ -12,7 +12,7 @@ export class HugService extends StateService {
     if (image === this.deadCat) {
       return image;
     }
-    
+
     return this.random([this.afkCat, this.angryCat, this.afkCat, this.angryCat, this.deadCat]);
   }
 }

@@ -11,7 +11,7 @@ export class VirtualPetComponent {
   stateMachineService: StateMachineService = new StateMachineService();
   image: string = this.stateMachineService.getImage();
   bubble: string = this.stateMachineService.getBubble();
-  
+
   waitTime: number = 5000;
   timeIncrement: number = 125;
   minProgress: number = 0;
