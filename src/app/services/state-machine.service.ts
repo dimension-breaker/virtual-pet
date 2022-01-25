@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
-import { CleanService } from '../state/clean/clean.service';
-import { DecayService } from '../state/decay/decay.service';
-import { FeedService } from '../state/feed/feed.service';
-import { HugService } from '../state/hug/hug.service';
-import { PointTheLaserPointerService } from '../state/point-the-laser-pointer/point-the-laser-pointer.service';
-import { PutToSleepService } from '../state/put-to-sleep/put-to-sleep.service';
+import { CleanService } from './state/clean.service';
+import { DecayService } from './state/decay.service';
+import { FeedService } from './state/feed.service';
+import { HugService } from './state/hug.service';
+import { PointTheLaserPointerService } from './state/point-the-laser-pointer.service';
+import { PutToSleepService } from './state/put-to-sleep.service';
 
 @Injectable({
   providedIn: 'root'

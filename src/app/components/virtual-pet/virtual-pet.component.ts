@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { interval, Observable, Subscription } from 'rxjs';
-import { StateMachineService } from 'src/app/services/state-machine/state-machine.service';
+import { StateMachineService } from 'src/app/services/state-machine.service';
 
 @Component({
   selector: 'app-virtual-pet',
