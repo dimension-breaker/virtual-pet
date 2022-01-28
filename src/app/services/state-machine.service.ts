@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 import { CleanService } from './state/clean.service';
-import { DecayService } from './state/decay.service';
+import { DoNothingService } from './state/do-nothing.service';
 import { FeedService } from './state/feed.service';
 import { HugService } from './state/hug.service';
-import { PointTheLaserPointerService } from './state/point-the-laser-pointer.service';
-import { PutToSleepService } from './state/put-to-sleep.service';
+import { LaserBeamService } from './state/laser-beam.service';
+import { SleepService } from './state/sleep.service';
 
 @Injectable({
   providedIn: 'root'
@@ -19,12 +19,12 @@ export class StateMachineService {
     "put to sleep"
   ]
   protected states = [
-    new DecayService(),
+    new DoNothingService(),
     new CleanService(),
     new FeedService(),
     new HugService(),
-    new PointTheLaserPointerService(),
-    new PutToSleepService()
+    new LaserBeamService(),
+    new SleepService()
   ]
   protected image: string = this.states[0].afkCat;
 

@@ -4,12 +4,16 @@ import { StateService } from './state.service';
 @Injectable({
   providedIn: 'root'
 })
-export class PutToSleepService extends StateService {
+export class LaserBeamService extends StateService {
   constructor() {
     super();
   }
 
   execute(image: string): string {
-    return this.random([this.angryCat, this.deadCat, this.sleepyCat]);
+    if (image === this.hungryCat || image === this.sleepyCat) {
+      return image;
+    }
+
+    return this.fastCat;
   }
 }

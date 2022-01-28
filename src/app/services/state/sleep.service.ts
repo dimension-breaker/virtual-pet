@@ -4,16 +4,12 @@ import { StateService } from './state.service';
 @Injectable({
   providedIn: 'root'
 })
-export class PointTheLaserPointerService extends StateService {
+export class SleepService extends StateService {
   constructor() {
     super();
   }
 
   execute(image: string): string {
-    if (image === this.eatingCat || image === this.sleepyCat) {
-      return image;
-    }
-
-    return this.runningCat;
+    return this.random([this.angryCat, this.deadCat, this.sleepyCat]);
   }
 }

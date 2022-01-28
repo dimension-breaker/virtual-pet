@@ -9,6 +9,6 @@ export class FeedService extends StateService {
     super();
   }
   execute(image: string): string {
-    return this.random([this.deadCat, this.eatingCat, this.eatingCat, this.eatingCat]);
+    return this.random([this.deadCat, this.hungryCat, this.hungryCat, this.hungryCat]);
   }
 }

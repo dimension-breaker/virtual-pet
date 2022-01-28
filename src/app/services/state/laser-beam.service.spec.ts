@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
-import { PutToSleepService } from './put-to-sleep.service';
+import { LaserBeamService } from './laser-beam.service';
 
 
-describe('PutToSleepService', () => {
-  let service: PutToSleepService;
+describe('LaserBeamService', () => {
+  let service: LaserBeamService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(PutToSleepService);
+    service = TestBed.inject(LaserBeamService);
   });
 
   it('should be created', () => {
