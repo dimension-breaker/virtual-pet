@@ -5,38 +5,32 @@ import { FeedService } from './state/feed.service';
 import { HugService } from './state/hug.service';
 import { LaserBeamService } from './state/laser-beam.service';
 import { SleepService } from './state/sleep.service';
+import { StateService } from './state/state.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class StateMachineService {
-  buttonTexts = [
-    "decay",
-    "clean",
-    "feed",
-    "hug",
-    "point the laser pointer",
-    "put to sleep"
-  ]
-  protected states = [
-    new DoNothingService(),
-    new CleanService(),
-    new FeedService(),
-    new HugService(),
-    new LaserBeamService(),
-    new SleepService()
-  ]
-  protected image: string = this.states[0].afkCat;
-
-  execute(state: string): void {
-    this.image = this.states[this.buttonTexts.indexOf(state)].execute(this.image);
+  private image: string = 'assets/AFKCat.gif'
+  private click: { [button: string]: StateService } = {
+    'clean': new CleanService(),
+    'do nothing': new DoNothingService(),
+    'feed': new FeedService(),
+    'hug': new HugService(),
+    'laser beam': new LaserBeamService(),
+    'sleep': new SleepService()
   }
 
-  getImage(): string {
-    return this.image;
+  public getImage(): string { return this.image }
+
+  public getText(): string {
+    let start = this.image.lastIndexOf('/') + 1
+    let mid = this.image.lastIndexOf('C')
+    let end = this.image.lastIndexOf('.')
+    return this.image.substring(start, mid) + ' ' + this.image.substring(mid, end)
   }
 
-  getBubble(): string {
-    return "candy is " + this.image.substring(this.image.lastIndexOf("/") + 1, this.image.lastIndexOf("C")).toLowerCase();
-  }
+  public getButtons(): string[] { return Object.keys(this.click).filter(function(value) { return value != 'do nothing' }) }
+
+  public clickButton(button: string): void { this.image = this.click[button].applyTo(this.image) }
 }

@@ -4,18 +4,19 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export abstract class StateService {
-  afkCat: string = "assets/AFKCat.gif";
-  angryCat: string = "assets/AngryCat.gif";
-  fastCat: string = "assets/FastCat.gif";
-  deadCat: string = "assets/DeadCat.gif";
-  hungryCat: string = "assets/HungryCat.gif";
-  happyCat: string = "assets/HappyCat.gif";
-  sleepyCat: string = "assets/SleepyCat.gif";
-  wetCat: string = "assets/WetCat.gif";
+  protected afkCat: string = 'assets/AFKCat.gif';
+  protected angryCat: string = 'assets/AngryCat.gif';
+  protected fastCat: string = 'assets/FastCat.gif';
+  protected deadCat: string = 'assets/DeadCat.gif';
+  protected hungryCat: string = 'assets/HungryCat.gif';
+  protected happyCat: string = 'assets/HappyCat.gif';
+  protected sleepyCat: string = 'assets/SleepyCat.gif';
+  protected wetCat: string = 'assets/WetCat.gif';
 
-  abstract execute(image: string): string;
+  protected newState: { [state: string]: string[] } = {}
 
-  protected random(state: string[]): string {
-    return state[Math.floor(Math.random() * state.length)];
+  public applyTo(image: string): string {
+    let newState = image in this.newState ? this.newState[image] : this.newState[String(null)]
+    return newState[Math.floor(Math.random() * newState.length)]
   }
 }

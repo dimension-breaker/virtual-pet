@@ -10,7 +10,7 @@ import { StateMachineService } from 'src/app/services/state-machine.service';
 export class VirtualPetComponent {
   stateMachineService: StateMachineService = new StateMachineService();
   image: string = this.stateMachineService.getImage();
-  bubble: string = this.stateMachineService.getBubble();
+  bubble: string = this.stateMachineService.getText();
 
   waitTime: number = 5000;
   timeIncrement: number = 125;
@@ -24,7 +24,7 @@ export class VirtualPetComponent {
 
   tick(): void {
     if (this.progress >= this.maxProgress) {
-      this.execute(this.stateMachineService.buttonTexts[0]);
+      this.execute('do nothing');
     }
 
     this.progress += this.maxProgress / (this.waitTime / this.timeIncrement);
@@ -39,9 +39,9 @@ export class VirtualPetComponent {
   }
 
   execute(state: string): void {
-    this.stateMachineService.execute(state)
+    this.stateMachineService.clickButton(state)
     this.image = this.stateMachineService.getImage();
-    this.bubble = this.stateMachineService.getBubble();
+    this.bubble = this.stateMachineService.getText();
 
     this.progress = this.minProgress;
     this.stringProgress = this.progress + '%'

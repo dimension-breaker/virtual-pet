@@ -5,10 +5,11 @@ import { StateService } from './state.service';
   providedIn: 'root'
 })
 export class FeedService extends StateService {
-  constructor() {
+  public constructor() {
     super();
-  }
-  execute(image: string): string {
-    return this.random([this.deadCat, this.hungryCat, this.hungryCat, this.hungryCat]);
+
+    this.newState = {
+      null: [this.deadCat, this.hungryCat, this.hungryCat, this.hungryCat]
+    }
   }
 }

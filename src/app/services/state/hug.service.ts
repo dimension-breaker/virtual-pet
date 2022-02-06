@@ -5,14 +5,12 @@ import { StateService } from './state.service';
   providedIn: 'root'
 })
 export class HugService extends StateService {
-  constructor() {
+  public constructor() {
     super();
-  }
-  execute(image: string): string {
-    if (image === this.deadCat) {
-      return image;
-    }
 
-    return this.random([this.afkCat, this.angryCat, this.afkCat, this.angryCat, this.deadCat]);
+    this.newState = {
+      deadCat: [this.deadCat],
+      null: [this.afkCat, this.angryCat, this.afkCat, this.angryCat, this.deadCat]
+    }
   }
 }

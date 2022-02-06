@@ -5,15 +5,12 @@ import { StateService } from './state.service';
   providedIn: 'root'
 })
 export class CleanService extends StateService {
-  constructor() {
+  public constructor() {
     super();
-  }
 
-  execute(image: string): string {
-    if (image === this.deadCat) {
-      return image;
+    this.newState = {
+      deadCat: [this.deadCat],
+      null: [this.angryCat, this.wetCat]
     }
-
-    return this.random([this.angryCat, this.wetCat]);
   }
 }

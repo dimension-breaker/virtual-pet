@@ -5,15 +5,13 @@ import { StateService } from './state.service';
   providedIn: 'root'
 })
 export class LaserBeamService extends StateService {
-  constructor() {
+  public constructor() {
     super();
-  }
 
-  execute(image: string): string {
-    if (image === this.hungryCat || image === this.sleepyCat) {
-      return image;
+    this.newState = {
+      hungryCat: [this.hungryCat],
+      sleepyCat: [this.sleepyCat],
+      null: [this.fastCat]
     }
-
-    return this.fastCat;
   }
 }
