@@ -1,2 +1,15 @@
-<app-virtual-pet></app-virtual-pet>
-<app-graveyard></app-graveyard>
+<div class="d-flex justify-content-center pt-5">
+    <div class="card" style="width: 40rem">
+        <img class="card-img-top" src="{{ stateMachineService.getImage() }}">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-9">
+                    <button class="btn {{ button.key }} mx-2" *ngFor="let button of buttons | keyvalue" (click)="clickButton(button.value)">{{ button.value }}</button>
+                </div>
+                <div class="col-3">
+                    <input class="form-control text-center text-lowercase" placeholder="{{ stateMachineService.getText() }}" readonly>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -13,7 +13,7 @@ export abstract class StateService {
   protected sleepyCat: string = 'assets/SleepyCat.gif';
   protected wetCat: string = 'assets/WetCat.gif';
 
-  protected newState: { [state: string]: string[] } = {}
+  protected newState!: { [state: string]: string[] }
 
   public applyTo(image: string): string {
     let newState = image in this.newState ? this.newState[image] : this.newState[String(null)]
