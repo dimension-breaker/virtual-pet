@@ -1,11 +1,11 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 
-body { animation: flicker 1.75s linear infinite }
+body { animation: flicker 1.75s linear infinite; }
 
 @keyframes flicker {
-    0% { background-color: white }
-    25% { background-color: lightblue }
-    50% { background-color: lightyellow }
-    75% { background-color: lightpink }
-    100% { background-color: white }
+    0% { background-color: white; }
+    25% { background-color: lightblue; }
+    50% { background-color: lightyellow; }
+    75% { background-color: lightpink; }
+    100% { background-color: white; }
 }

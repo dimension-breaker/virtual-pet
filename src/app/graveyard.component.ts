@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { interval, Observable, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-graveyard',
@@ -7,32 +6,25 @@ import { interval, Observable, Subscription } from 'rxjs';
   styleUrls: ['./graveyard.component.css']
 })
 export class GraveyardComponent {
-  isMidnight: boolean = false;
-  graveyardLefts: string[] = ["10%", "70%", "10%", "70%"];
-  graveyardTops: string[] = ["10%", "10%", "50%", "50%"];
-  zombies: string[] = [
-    "OwO",
-    "the power of friendship",
-    "meow",
-    "nya~",
-    "butterfly sparkles"
-  ]
+  public isMidnight: boolean
+  public graveyardTop: (string | undefined)[]
+  public graveyardLeft: (string | undefined)[]
+  public zombie: (string | undefined)[]
 
-  observable: Observable<number> = interval(4000);
-  subscription: Subscription = this.observable.subscribe((i) => this.tick());
+  public constructor() {
+    this.isMidnight = false
+    this.graveyardTop = ['10%', '10%', '50%', '50%']
+    this.graveyardLeft = ['10%', '70%', '10%', '70%']
+    this.zombie = ['OwO', 'the power of friendship', 'meow', 'nya~', 'butterfly sparkles']
 
-  tick(): void {
-    this.isMidnight = !this.isMidnight;
+    setInterval(() => {
+      this.isMidnight = !this.isMidnight;
 
-    if (!this.isMidnight) {
-      this.shuffle(this.graveyardTops);
-      this.shuffle(this.graveyardLefts);
-      this.shuffle(this.zombies);
-    }
-  }
-
-  shuffle(array: string[]): void {
-    let temp: any = array.shift();
-    array.push(temp);
+      if (!this.isMidnight) {
+        this.graveyardTop.push(this.graveyardTop.shift())
+        this.graveyardLeft.push(this.graveyardLeft.shift())
+        this.zombie.push(this.zombie.shift())
+      }
+    }, 4000)
   }
 }

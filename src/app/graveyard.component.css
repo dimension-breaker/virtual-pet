@@ -1,12 +1,12 @@
 p {
-    position: absolute;
-    margin: 0;
-    margin-top: 2em;
+    animation: rise 4s cubic-bezier(0.54, -0.53, 1, -0.29) infinite;
     color: white;
     font-family: 'Mr Dafoe';
     font-size: 5.5em;
+    margin: 0;
+    margin-top: 2em;
+    position: absolute;
     text-shadow: 0 0 0.05em lightgoldenrodyellow, 0 0 0.2em lightgreen, 0 0 0.3em black;
-    animation: rise 4s cubic-bezier(0.54, -0.53, 1, -0.29) infinite;
 }
 
 @keyframes rise {

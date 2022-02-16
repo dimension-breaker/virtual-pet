@@ -1,9 +1,6 @@
-<div class="d-flex justify-content-between pt-5">
-    <div></div>
+<div class="d-flex justify-content-center pt-5">
     <div class="card" style="width: 800px">
-        <div class="progress border" style="height: 5px">
-            <div class="progress-bar bg-danger progress-bar-striped progress-bar-animated" [ngStyle]="{ 'width': progress + '%' }"></div>
-        </div>
+        <div class="progress border" style="height: 5px"><div class="progress-bar bg-danger progress-bar-striped progress-bar-animated" [ngStyle]="{ 'width': progress + '%' }"></div></div>
         <img class="card-img-top border" style="height: 600px" src="{{ stateMachineService.getImage() }}">
         <div class="card-body pb-5">
             <div class="row">
@@ -16,6 +13,5 @@
             </div>
         </div>
     </div>
-    <div></div>
 </div>
 <app-graveyard></app-graveyard>

@@ -5,11 +5,8 @@ import { GraveyardComponent } from './graveyard.component';
 
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    GraveyardComponent
-  ],
-  imports: [BrowserModule],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  declarations: [AppComponent, GraveyardComponent],
+  imports: [BrowserModule]
 })
-export class AppModule { }
+export class AppModule {}

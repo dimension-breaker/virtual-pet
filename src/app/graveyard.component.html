@@ -1,1 +1,1 @@
-<p *ngIf="isMidnight" [style.left]="graveyardLefts[0]" [style.top]="graveyardTops[0]">{{ zombies[0] }}</p>
+<p *ngIf="isMidnight" [ngStyle]="{ top: graveyardTop[0], left: graveyardLeft[0] }">{{ zombie[0] }}</p>
