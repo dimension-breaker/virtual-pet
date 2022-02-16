@@ -6,11 +6,9 @@ import { StateService } from './state.service';
 })
 export class CleanService extends StateService {
   public constructor() {
-    super();
+    super()
 
-    this.newState = {
-      deadCat: [this.deadCat],
-      null: [this.angryCat, this.wetCat]
-    }
+    this.newState[this.deadCat] = [this.deadCat]
+    this.newState[''] = [this.angryCat, this.wetCat]
   }
 }

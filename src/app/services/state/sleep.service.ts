@@ -6,10 +6,8 @@ import { StateService } from './state.service';
 })
 export class SleepService extends StateService {
   public constructor() {
-    super();
+    super()
 
-    this.newState = {
-      null: [this.angryCat, this.deadCat, this.sleepyCat]
-    }
+    this.newState[''] = [this.angryCat, this.deadCat, this.sleepyCat]
   }
 }

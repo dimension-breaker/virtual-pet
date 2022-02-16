@@ -6,12 +6,10 @@ import { StateService } from './state.service';
 })
 export class LaserBeamService extends StateService {
   public constructor() {
-    super();
+    super()
 
-    this.newState = {
-      hungryCat: [this.hungryCat],
-      sleepyCat: [this.sleepyCat],
-      null: [this.fastCat]
-    }
+    this.newState[this.hungryCat] = [this.hungryCat]
+    this.newState[this.sleepyCat] = [this.sleepyCat]
+    this.newState[''] = [this.fastCat]
   }
 }

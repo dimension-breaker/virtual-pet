@@ -6,11 +6,9 @@ import { StateService } from './state.service';
 })
 export class HugService extends StateService {
   public constructor() {
-    super();
+    super()
 
-    this.newState = {
-      deadCat: [this.deadCat],
-      null: [this.afkCat, this.angryCat, this.afkCat, this.angryCat, this.deadCat]
-    }
+    this.newState[this.deadCat] = [this.deadCat]
+    this.newState[''] = [this.afkCat, this.angryCat, this.afkCat, this.angryCat, this.deadCat]
   }
 }

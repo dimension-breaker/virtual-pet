@@ -6,10 +6,8 @@ import { StateService } from './state.service';
 })
 export class FeedService extends StateService {
   public constructor() {
-    super();
+    super()
 
-    this.newState = {
-      null: [this.deadCat, this.hungryCat, this.hungryCat, this.hungryCat]
-    }
+    this.newState[''] = [this.deadCat, this.hungryCat, this.hungryCat, this.hungryCat]
   }
 }

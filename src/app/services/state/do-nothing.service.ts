@@ -6,17 +6,15 @@ import { StateService } from './state.service';
 })
 export class DoNothingService extends StateService {
   public constructor() {
-    super();
+    super()
 
-    this.newState = {
-      afkCat: [this.angryCat, this.angryCat, this.hungryCat, this.sleepyCat],
-      angryCat: [this.afkCat, this.deadCat],
-      deadCat: [this.deadCat],
-      hungryCat: [this.afkCat, this.sleepyCat],
-      happyCat: [this.afkCat],
-      fastCat: [this.angryCat, this.sleepyCat],
-      sleepyCat: [this.afkCat, this.happyCat, this.deadCat, this.sleepyCat],
-      null: [this.afkCat, this.happyCat, this.deadCat, this.sleepyCat]
-    }
+    this.newState[this.afkCat] = [this.angryCat, this.angryCat, this.hungryCat, this.sleepyCat]
+    this.newState[this.angryCat] = [this.afkCat, this.deadCat]
+    this.newState[this.deadCat] = [this.deadCat]
+    this.newState[this.hungryCat] = [this.afkCat, this.sleepyCat]
+    this.newState[this.happyCat] = [this.afkCat]
+    this.newState[this.fastCat] = [this.angryCat, this.sleepyCat]
+    this.newState[this.sleepyCat] = [this.afkCat, this.happyCat, this.deadCat, this.sleepyCat]
+    this.newState[''] = [this.afkCat, this.happyCat, this.deadCat, this.sleepyCat]
   }
 }
