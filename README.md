@@ -3,7 +3,7 @@ https://dimension-breaker.github.io/virtual-pet/
 
 ### Run Your Own Instance
 1. Clone this repo.
-2. Download Node.js.
+2. Install Node.js.
 3. `npm install -g @angular/cli`
 4. `npm install`
 5. `npm start`
