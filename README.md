@@ -1,5 +1,5 @@
 ### Running Instance
-https://solidwaterslayer.github.io/virtual-pet/
+https://dimension-breaker.github.io/virtual-pet/
 
 ### Run Your Own Instance
 - Download ```Node.js```
