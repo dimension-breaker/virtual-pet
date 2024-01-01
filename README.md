@@ -1,5 +1,5 @@
 # Running Instance
-https://dimension-breaker.github.io/virtual-pet/
+https://dimension-breaker.github.io/virtual-pet
 
 This is a state machine that I built in college. It uses the state design pattern :smile:
 
