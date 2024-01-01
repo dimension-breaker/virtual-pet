@@ -1,7 +1,7 @@
 # Running Instance
 https://dimension-breaker.github.io/virtual-pet/
 
-This is a state machine I made freshman year. It uses the state design pattern.
+This is a state machine I made freshman year. It uses the state design pattern :smile:
 
 # Run Your Own Instance
 1. Clone the repo.
